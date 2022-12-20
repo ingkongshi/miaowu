@@ -1,0 +1,103 @@
+<!DOCTYPE html><html><head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+	<title>喵呜捏个猫</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#f5ebd7">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="./assets/index.css">
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+	<script src="./assets/maker.js"></script>
+	<script defer="defer" src="./assets/js/app-76d562f0a3b68f11a1f1.js"></script>
+</head>
+<body class="watermarked"><div id="app"></div><div id="reload">刷新</div></body>
+<script>
+	watermarked({content: '喵呜捏个猫'})
+	addListioner('watermarked')
+	let SHARE_PNG, TIP_DIV = document.createElement('div');
+
+	const createimg = (options, callback) => {
+		const {src,scale = 1} = options
+		if (!src) return;const canvas = document.createElement('canvas');let ctx = canvas.getContext('2d');
+		canvas.width = 300;
+		canvas.height = 240;
+		const img = new Image();;img.src = src;
+		img.onload = function () {
+			const iw = img.width * scale;
+			const ih = img.height * scale;
+			ctx.fillStyle = "#eee";
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			if (src==='./assets/share.png') {
+				ctx.drawImage(img, 0, 0, iw, ih);
+			} else {
+				ctx.drawImage(img, (canvas.width - iw)/2, (canvas.height - ih)/2 - 10, iw, ih);
+			}
+			const url = canvas.toDataURL();
+			callback(url)
+		}
+	}
+	const mpostmessage = options => wx.miniProgram.postMessage(options)
+	createimg({src: './assets/share.png'}, url => mpostmessage({ data: {title: '快来跟我一起捏猫猫~~~~', base64: url} }))
+	const onMobile = !!navigator.userAgent.match(/AppleWebKit.*Mobile.*/);document.getElementById('reload').addEventListener('click', function () {localStorage.clear();sessionStorage.clear();location.reload()});
+	const wxPostmessage = (name, img='') => createimg({src: img, scale: 0.38}, url => mpostmessage({ data: {title: `这是我家“${name}”，让我看看你家猫长啥样子`, base64: url} }));
+	const wxFn = (dataUrl) => {let div = document.createElement("div"); let btn = document.createElement("div"); let body = document.querySelector("body"); btn.innerHTML = '关闭'; btn.className = "closeBtn"; div.className = "shareMask"; window.document.body.appendChild(div); div.innerHTML = `<img src=${dataUrl} /><div>长按保存图片</div>`; div.appendChild(btn); body.classList.add("modal-open"); btn.onclick = function () { body.classList.remove("modal-open"); div.remove(); } };
+	const drawCat = (e, i, t, h) => {
+		e && e.preventDefault();
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+		const imgInfo = h.currentAvatar.thumb;
+		const img = new Image();img.src = h.imgSrc;img.onload = () => {
+			const iw = img.width * 4;
+			const ih = img.height * 4;
+			canvas.width=iw;
+			canvas.height = ih;
+			ctx.fillStyle = "white";
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			ctx.drawImage(img, 0, 0, iw, ih);
+			const myFont = new FontFace('myfont', 'url(./assets/font.ttf)');myFont.load().then(font => { document.fonts.add(font) }).then(() => {ctx.fillStyle = "#000";ctx.font = 'bold 200px myFont';ctx.textAlign = 'center';ctx.fillText(h.currentAvatar.name, canvas.width / 2, canvas.height * 0.965);h.canvasUrl = canvas.toDataURL();
+			SHARE_PNG = h.canvasUrl
+			wxPostmessage(h.currentAvatar.name, h.imgSrc)}
+			)}
+	}
+	const typing = (element='typing') => {
+		const h1 = document.getElementById(element);
+		h1.innerHTML = h1.textContent.replace(/\S/g, "<span>$&</span>").replace(/\s/g, "<span>&nbsp;</span>");
+		let delay = 0;
+		const arr = document.querySelectorAll('span')
+		arr.forEach((span, index) => {
+			delay += 0.15
+			if (index === arr.length - 1) delay += 0.18
+			span.style.setProperty('--delay', `${delay}s`)
+		})
+
+		h1.addEventListener('animationend', (e) => {
+			if (e.target === document.querySelector('h1 span:last-child')) {
+				h1.classList.add('ended')
+		}
+		})
+	}
+	const showTips = (e, i, t, h) => {
+		TIP_DIV.id = 'tipContainer'
+    TIP_DIV.innerHTML =  `<img class="arrow" src="./assets/arrow.png" alt=""><div class="content"><div id="typing">喵~捏完啦？真阔耐呀~点击右上角的“...”把你捏的喵分享给好友即可获得免费下载机会哦~</div><img src="./assets/icon.png" alt=""></div>`
+    window.document.body.append(TIP_DIV)
+		drawCat(e, i, t, h)
+    setTimeout(() => {
+			TIP_DIV.remove()
+			setTimeout(wxFn(SHARE_PNG), 5000)
+		}, 10000)
+			
+		// document.addEventListener("visibilitychange", function () {
+		// 	if (document.visibilityState =="visible") {
+		// 		TIP_DIV.remove()
+		// 		SHARE_PNG && wxFn(SHARE_PNG);
+		// 	}
+		// });
+
+	}
+	const downloadCat = (e, i, t, h) => {showTips(e, i, t, h);typing()}
+</script>
+
+</html>

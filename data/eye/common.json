@@ -1,0 +1,43 @@
+{
+  "list": {
+    "eye_1": {},
+    "eye_2": {},
+    "eye_3": {},
+    "eye_4": {},
+    "eye_5": {},
+    "eye_6": {},
+    "eye_7": {},
+    "eye_8": {},
+    "eye_9": { "hasWhiteEyes": true },
+    "eye_10": { "hasWhiteEyes": true },
+    "eye_11": { "hasWhiteEyes": true },
+    "eye_12": { "hasWhiteEyes": true },
+    "eye_13": { "hasWhiteEyes": true },
+    "eye_14": { "hasWhiteEyes": true },
+    "eye_15": {},
+    "eye_16": {},
+    "eye_17": { "hasWhiteEyes": true },
+    "eye_18": { "hasWhiteEyes": true },
+    "eye_19": {
+      "hasWhiteEyes": true,
+      "new": true
+    },
+    "eye_20": {
+      "hasWhiteEyes": true,
+      "new": true
+    }
+  },
+  "colorList": [
+    "#000000",
+    "#f5ef42",
+    "#F8B600",
+    "#94D8F0",
+    "#9CE863",
+    ["#94D8F0", "#9CE863"],
+    ["#9CE863", "#94D8F0"],
+    ["#94D8F0", "#f5ef42"],
+    ["#f5ef42", "#94D8F0"],
+    ["#9CE863", "#f5ef42"],
+    ["#f5ef42", "#9CE863"]
+  ]
+}

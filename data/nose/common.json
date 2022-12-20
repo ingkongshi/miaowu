@@ -1,0 +1,25 @@
+{
+  "list": {
+    "#ff8d84": {
+      "color": "pink"
+    },
+    "#C77C72": {
+      "color": "pale-red"
+    },
+    "#d04f3d": {
+      "color": "red"
+    },
+    "#AC701E": {
+      "color": "brown"
+    },
+    "#695446": {
+      "color": "dark-brown"
+    },
+    "#666666": {
+      "color": "gray"
+    },
+    "#000000": {
+      "color": "black"
+    }
+  }
+}

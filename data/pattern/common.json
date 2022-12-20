@@ -1,0 +1,214 @@
+{
+  "list": {
+    "white": {
+      "fill": "#ffffff",
+      "pattern": {
+        "basic": {}
+      }
+    },
+    "black": {
+      "fill": "#000000",
+      "stroke": "#4d4d4d",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "gray": {
+      "fill": "#666666",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "brown": {
+      "fill": "#D79A59",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "cream-tabby": {
+      "fill": "#ffe2bc",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "yellow-tabby": {
+      "fill": "#ffdb53",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "red-tabby": {
+      "fill": "#eba731",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "brown-tabby": {
+      "fill": "#beb296",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "silver-tabby": {
+      "fill": "#c9c9c9",
+      "pattern": {
+        "basic": {},
+        "bicolor_1": {},
+        "bicolor_2": {},
+        "bicolor_3": {},
+        "bicolor_4": {},
+        "bicolor_5": {},
+        "bicolor_6": {},
+        "bicolor_7": {},
+        "bicolor_8": {},
+        "bicolor_9": {}
+      },
+      "earColorList": {
+        "bicolor_8": ["#ffffff", ""],
+        "bicolor_9": ["#ffffff", ""]
+      }
+    },
+    "calico": {
+      "pattern": {
+        "pattern_1": {},
+        "pattern_2": {},
+        "pattern_3": {}
+      },
+      "colorList": {
+        "pattern_1": ["#1A1A1A", "#F8B600"],
+        "pattern_2": ["#1A1A1A", "#F8B600"],
+        "pattern_3": ["#696969", "#FFCE80"]
+      },
+      "earColorList": {
+        "pattern_1": ["#1A1A1A", "#F8B600"],
+        "pattern_2": ["#1A1A1A", "#F8B600"],
+        "pattern_3": ["#696969", "#FFCE80"]
+      }
+    },
+    "calico-tabby": {
+      "pattern": {
+        "pattern_4": {}
+      },
+      "colorList": {
+        "pattern_4": ["#696969", "#FFDB53"]
+      },
+      "earColorList": {
+        "pattern_4": ["#696969", "#FFDB53"]
+      }
+    },
+    "tortoiseshell": {
+      "pattern": {
+        "pattern_1": {}
+      },
+      "colorList": {
+        "pattern_1": ["#473513", "#D28728", "#cc9966"]
+      },
+      "earColorList": {
+        "pattern_1": ["#473513", "#473513"]
+      }
+    },
+    "pointed": {
+      "fill": "#f8eddb",
+      "pattern": {
+        "pattern_1": {}
+      },
+      "colorList": {
+        "pattern_1": ["#483700"]
+      },
+      "earColorList": {
+        "pattern_1": ["#483700", "#483700"]
+      }
+    }
+  }
+}
